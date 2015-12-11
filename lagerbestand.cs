@@ -8,9 +8,9 @@ namespace Lagerbestandrechnung
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            double  dlagerb;
+            double dlagerb;
             double us;
             double dlagerd;
             double lagerz;
@@ -32,18 +32,16 @@ namespace Lagerbestandrechnung
             dlagerd = 360 / us;
             lagerz = (jzs * us) / 360;
 
-            Console.WriteLine("Durchschnittlicher Lagerbestand beträgt: " + dlagerb + " Komponenten");
-            Console.WriteLine("Die Umschlagshäufigkeit beträgt: " + us);
+            Console.WriteLine("Durchschnittlicher Lagerbestand \n Berechnung: ( Jahresanfangs + Jahresbestand ) /2 ) \n also ( {0} + {1} ) / 2 ) \n", jab, jb);
+            Console.WriteLine("Durchschnittlicher Lagerbestand beträgt: " + dlagerb + " Komponenten \n");
+
+            Console.WriteLine("Berechnung Umschlagshäufigkeit \n ( Laufende Komponenten im Jahr / Durchschnittlicher Lagerbestand ) \n ( {0} / {1} ) \n", entkomp, dlagerb);
+            Console.WriteLine("Die Umschlagshäufigkeit beträgt: " + us +"\n");
+
             Console.WriteLine("Die Durchschnittliche Lagerdauer beträgt " + dlagerd + " Tage");
             Console.WriteLine("Der Lagerzinssatz beträgt " + lagerz + "%");
 
             Console.ReadKey();
-             
-
-
-
-
-
         }
     }
 }
